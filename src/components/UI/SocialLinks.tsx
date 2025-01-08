@@ -3,20 +3,17 @@ import React from "react";
 import { Github, Linkedin, Twitter, Mail, FileText } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-
-
 const SocialLinks = () => {
   const handleResumeClick = () => {
     // Replace with your actual resume PDF URL
-    window.open('/path-to-your-resume.pdf', '_blank');
+    window.open("/path-to-your-resume.pdf", "_blank");
   };
- 
 
   return (
     <div className="space-y-4">
       <div className="flex space-x-6 text-gray-400">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/tryb3-tunchi"
           className="hover:text-teal-400 transition-colors hover:-translate-y-1 transform duration-200"
           target="_blank"
           rel="noopener noreferrer"
@@ -24,7 +21,7 @@ const SocialLinks = () => {
           <Github size={24} />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://linkedin.com/in/obinnatochukwu"
           className="hover:text-teal-400 transition-colors hover:-translate-y-1 transform duration-200"
           target="_blank"
           rel="noopener noreferrer"
@@ -32,7 +29,7 @@ const SocialLinks = () => {
           <Linkedin size={24} />
         </a>
         <a
-          href="https://twitter.com/yourusername"
+          href="https://twitter.com/itstunchi"
           className="hover:text-teal-400 transition-colors hover:-translate-y-1 transform duration-200"
           target="_blank"
           rel="noopener noreferrer"

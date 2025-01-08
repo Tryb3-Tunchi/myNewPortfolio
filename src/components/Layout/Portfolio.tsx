@@ -65,7 +65,8 @@ const Portfolio = () => {
           </h1>
 
           <p className="text-lg text-gray-400 mb-8">
-            Frontend Developer crafting exceptional digital experiences and having fun with codes.
+            Frontend Developer crafting exceptional digital experiences and
+            having fun with codes.
           </p>
 
           {/* Navigation */}
