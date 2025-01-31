@@ -4,9 +4,10 @@ import { Send, Loader, CheckCircle, XCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 // Replace these with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "service_tzm5nmf";
+const EMAILJS_TEMPLATE_ID = "template_pux6p77";
+const EMAILJS_TEMPLATE_ID_ME = "template_3v35zes";
+const EMAILJS_PUBLIC_KEY = "xE4YeTp98nG3INHWd";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -28,21 +29,42 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ isSubmitting: true, isSubmitted: false, error: null });
-
+  
     try {
-      await emailjs.sendForm(
+      // Send email to the owner (You) with the form data
+      await emailjs.send(
         EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        formRef.current!,
+        EMAILJS_TEMPLATE_ID_ME, // Template for owner
+        {
+          to_email: "bebefinn72@gmail.com", // Replace with your actual email
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          reason: formData.reason,
+          message: formData.message,
+        },
         EMAILJS_PUBLIC_KEY
       );
-
+  
+      // Send confirmation email to the sender
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID, // Template for sender confirmation
+        
+        {
+          to_name: formData.name,
+          to_email: formData.email, // Email of the sender
+          message: "Thank you for reaching out!. I have received your message and will review your inquiry as soon as possible. If your request requires immediate attention, I’ll do my best to get back to you promptly. In the meantime, feel free to explore my linkedIn, connect to learn more about my work.",
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+  
       setStatus({
         isSubmitting: false,
         isSubmitted: true,
-        error: null
+        error: null,
       });
-
+  
       // Reset form
       setFormData({
         name: '',
@@ -51,7 +73,7 @@ const ContactSection = () => {
         reason: '',
         message: ''
       });
-
+  
     } catch (error) {
       setStatus({
         isSubmitting: false,
@@ -60,7 +82,7 @@ const ContactSection = () => {
       });
     }
   };
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,

@@ -22,7 +22,7 @@ const Sidebar: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 mt-4">
         <a href="https://linkedin.com" target="_blank" rel="noreferrer">
           <i className="fab fa-linkedin"></i>
         </a>

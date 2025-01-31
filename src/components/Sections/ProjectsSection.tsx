@@ -1,31 +1,41 @@
 import React from "react";
 import { Github, ExternalLink } from "lucide-react";
+// import pic1 from "/"
 
 const ProjectsContent = () => {
   const projects = [
     {
-      title: "Project One",
+      title: "ASL Originals",
       description:
         "A full-stack web application built with React, Node.js, and MongoDB.",
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
       github: "https://github.com/yourusername/project-one",
-      live: "https://project-one.com",
-      image: "/api/placeholder/600/400",
+      live: "https://asloriginals.netlify.app/credits",
+      image: "/pic1.PNG",
     },
     {
-      title: "Project two",
+      title: "Famtrust",
       description:
         "A full-stack web application built with React, Node.js, and MongoDB.",
       technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
       github: "https://github.com/yourusername/project-one",
-      live: "https://project-one.com",
-      image: "/api/placeholder/600/400",
+      live: "https://famtrust-frontend-five.vercel.app",
+      image: "pics2.PNG",
+    },
+    {
+      title: "Amaziteacademy",
+      description:
+        "A full-stack web application built with React, Node.js, and MongoDB.",
+      technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
+      github: "https://github.com/yourusername/project-one",
+      live: "https://amaziteacademy.com",
+      image: "pics3.PNG",
     },
     // Add more projects...
   ];
 
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-8 ">
       {projects.map((project, index) => (
         <div
           key={index}

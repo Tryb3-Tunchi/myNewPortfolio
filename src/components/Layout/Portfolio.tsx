@@ -87,14 +87,14 @@ const Portfolio = () => {
       </div>
 
       {/* Right Section */}
-      <main className="lg:w-2/3 lg:ml-[33.333333%] p-8">
-        <div className="space-y-32">
+      <main className="lg:w-2/3 lg:ml-[33.333333%] p-8 pl-16">
+        <div className="space-y-2">
           <section id="about" className="min-h-screen py-16">
             <h2 className="text-2xl font-bold mb-6 text-teal-400">About</h2>
             <AboutSection />
           </section>
 
-          <section id="experience" className="min-h-screen py-16">
+          <section id="experience" className="min-h-screen  py-16">
             <h2 className="text-2xl font-bold mb-6 text-teal-400">
               Experience
             </h2>
@@ -102,7 +102,7 @@ const Portfolio = () => {
           </section>
 
           <section id="projects" className="min-h-screen py-16">
-            <h2 className="text-2xl font-bold mb-6 text-teal-400">Projects</h2>
+            <h2 className="text-2xl font-bold mb-6 text-teal-400">Latest Projects</h2>
             <ProjectsSection />
           </section>
 
