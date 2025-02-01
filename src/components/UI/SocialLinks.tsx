@@ -1,7 +1,7 @@
 // src/components/UI/SocialLinks.tsx
-import React from "react";
+// import React from "react";
 import { Github, Linkedin, Twitter, Mail, FileText } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const SocialLinks = () => {
   const handleResumeClick = () => {

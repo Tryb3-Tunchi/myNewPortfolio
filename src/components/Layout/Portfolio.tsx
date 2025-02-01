@@ -1,5 +1,5 @@
 // src/components/Layout/Portfolio.tsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
 

@@ -1,5 +1,5 @@
 // src/App.tsx
-import React from 'react';
+// import React from 'react';
 import Portfolio from './components/Layout/Portfolio';
 
 const App = () => {
