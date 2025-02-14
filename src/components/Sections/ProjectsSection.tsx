@@ -7,7 +7,7 @@ const ProjectsContent = () => {
     {
       title: "ASL Originals",
       description:
-        "A full-stack web application built with React, Node.js, and MongoDB.",
+        "A full-stack web application built with React, Node.js, and Django-py.",
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
       github: "https://github.com/yourusername/project-one",
       live: "https://asloriginals.netlify.app/credits",
@@ -25,7 +25,7 @@ const ProjectsContent = () => {
     {
       title: "Amaziteacademy",
       description:
-        "A full-stack web application built with React, Node.js, and MongoDB.",
+        "A full-stack web application for school data system and studies for pupils built with React(vite), Node.js, and typescript.",
       technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
       github: "https://github.com/yourusername/project-one",
       live: "https://amaziteacademy.com",
