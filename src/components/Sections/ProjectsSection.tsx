@@ -7,7 +7,7 @@ const ProjectsContent = () => {
     {
       title: "ASL Originals",
       description:
-        "A full-stack web application built with React, Node.js, and Django-py.",
+        "A full-stack web application for fashionable clothings and other stylic accessories, built with React, Node.js, and Django-py.",
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
       github: "https://github.com/yourusername/project-one",
       live: "https://asloriginals.netlify.app/credits",
@@ -16,7 +16,7 @@ const ProjectsContent = () => {
     {
       title: "Famtrust",
       description:
-        "A full-stack web application built with React, Node.js, and MongoDB.",
+        "A full-stack web application for finance and other value managements, built with React, Node.js, and MongoDB.",
       technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
       github: "https://github.com/yourusername/project-one",
       live: "https://famtrust-frontend-five.vercel.app",
