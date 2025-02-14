@@ -31,7 +31,7 @@ const Portfolio = () => {
 
   // Mobile menu classes
   const mobileMenuClasses = `
-    fixed top-0 left-0 h-screen w-full lg:w-1/3 bg-gray-900 
+    fixed top-0 left-0 h-screen w-full md:w-3/4 bg-gray-900 
     transform transition-transform duration-300 ease-in-out z-40
     lg:translate-x-0 p-8 flex flex-col justify-between
     ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
@@ -42,7 +42,7 @@ const Portfolio = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="fixed top-4 right-4 z-50 p-2 rounded-lg bg-gray-800 lg:hidden"
+        className="fixed top-4 right-10 z-50 p-2 rounded-lg bg-gray-800 lg:hidden"
         aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
       >
         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -52,7 +52,7 @@ const Portfolio = () => {
       <div className={mobileMenuClasses}>
         <div
           className={`
-          transform transition-all duration-1000 
+          transform transition-all duration-1000 w-full m-auto 
           ${
             isVisible
               ? "translate-x-0 opacity-100"
@@ -60,17 +60,17 @@ const Portfolio = () => {
           }
         `}
         >
-          <h1 className="text-8xl font-bold mb-4 text-teal-400">
+          <h1 className=" text-7xl font-bold mb-4 text-teal-400">
             Obinna Tochukwu
           </h1>
 
           <p className="text-lg text-gray-400 mb-8">
-            Frontend web and software Developer crafting exceptional digital experiences, providing solutions and
-            having fun with codes.
+            Frontend web and software Developer crafting exceptional digital
+            experiences, providing solutions and having fun with codes.
           </p>
 
           {/* Navigation */}
-          <div className="space-y-4">
+          <div className="space-y-2">
             {["about", "experience", "projects"].map((section) => (
               <NavigationButton
                 key={section}
@@ -87,7 +87,7 @@ const Portfolio = () => {
       </div>
 
       {/* Right Section */}
-      <main className="lg:w-2/3 lg:ml-[33.333333%] p-8 pl-16">
+      <main className="md:ml-[3.333333%] p-8 md:px-16">
         <div className="space-y-2">
           <section id="about" className="min-h-screen py-16">
             <h2 className="text-2xl font-bold mb-6 text-teal-400">About</h2>
@@ -102,7 +102,9 @@ const Portfolio = () => {
           </section>
 
           <section id="projects" className="min-h-screen py-16">
-            <h2 className="text-2xl font-bold mb-6 text-teal-400">Latest Projects</h2>
+            <h2 className="text-2xl font-bold mb-6 text-teal-400">
+              Latest Projects
+            </h2>
             <ProjectsSection />
           </section>
 

@@ -2,11 +2,11 @@ import React from "react";
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="w-1/3 bg-gray-800 text-white p-6 flex flex-col justify-between">
+    <div className="w-1/2 bg-gray-800 text-white p-6 flex flex-col justify-between">
       <div>
-        <h1 className="text-4xl font-bold mb-4">Obinna Tochuwu</h1>
+        <h1 className="text-2xl font-bold mb-4">Obinna Tochuwu</h1>
         <p className="mb-6">Front-End Developer | Creating Interactive Experiences</p>
-        <div className="space-y-4">
+        <div className="space-y-2">
           {["About Me", "Experience", "Projects"].map((item, index) => (
             <button
               key={index}
