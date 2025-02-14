@@ -5,7 +5,7 @@ export const useScrollSpy = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "experience", "projects"];
+      const sections = ["about", "experience", "projects, contact"];
 
       const sectionElements = sections.map((section) => ({
         id: section,

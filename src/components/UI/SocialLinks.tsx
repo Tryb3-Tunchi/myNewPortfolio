@@ -40,7 +40,7 @@ const SocialLinks = () => {
 
       <div className="flex space-x-4">
         <a
-          href="#contact"
+          href="contact"
           className="flex items-center space-x-2 text-sm text-teal-400 hover:text-teal-300 
                    transition-colors duration-200"
         >

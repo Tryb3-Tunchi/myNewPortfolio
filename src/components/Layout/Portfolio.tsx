@@ -71,7 +71,7 @@ const Portfolio = () => {
 
           {/* Navigation */}
           <div className="space-y-2">
-            {["about", "experience", "projects"].map((section) => (
+            {["about", "experience", "projects","contact"].map((section) => (
               <NavigationButton
                 key={section}
                 label={section.charAt(0).toUpperCase() + section.slice(1)}
