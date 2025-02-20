@@ -31,6 +31,15 @@ const ProjectsContent = () => {
       live: "https://amaziteacademy.com",
       image: "pics3.PNG",
     },
+    {
+      title: "Tryb3-gpt Chat AI",
+      description:
+        "An AI chatting platform that detects any language, summarize and translate very effective and a good learning tool built with Typescript, chrome-AI API, and tailwind.",
+      technologies: ["Typescript", "Chrome API", "Tailwind CSS"],
+      github: "https://github.com/yourusername/project-one",
+      live: "https://tryb3-gpt.netlify.app/",
+      image: "pics4.png",
+    },
     // Add more projects...
   ];
 
