@@ -32,6 +32,15 @@ const ProjectsContent = () => {
       image: "pics3.PNG",
     },
     {
+      title: "Trading Platform",
+      description:
+        "A Broker and Trading platform for easy and built in copy trading signals that is built with Typescript, Vite, Public and specificall construsted API and tailwind.",
+      technologies: ["Typescript", "Trading API", "Tailwind CSS"],
+      github: "https://github.com/yourusername/project-one",
+      live: "COMING SOON",
+      image: "pics5.png",
+    },
+    {
       title: "Tryb3-gpt Chat AI",
       description:
         "An AI chatting platform that detects any language, summarize and translate very effective and a good learning tool built with Typescript, chrome-AI API, and tailwind.",
