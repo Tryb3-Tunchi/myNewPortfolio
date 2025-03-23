@@ -21,7 +21,7 @@ const ProjectsContent = () => {
       technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
       github: "https://github.com/yourusername/project-one",
       live: "https://famtrust-frontend-five.vercel.app",
-      image: "pics6.png",
+      image: "/pic6.png",
     },
     {
       title: "Famtrust",
