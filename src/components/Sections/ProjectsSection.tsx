@@ -14,6 +14,16 @@ const ProjectsContent = () => {
       image: "/pic1.PNG",
     },
     {
+      title: "Tryb3-Chaw",
+      description:
+        "An Online Food Delivery website that allows users to order food from various restaurants, track their orders, and manage their deliveries, built with React, Tailwind, and NodeJs..",
+
+      technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
+      github: "https://github.com/yourusername/project-one",
+      live: "https://famtrust-frontend-five.vercel.app",
+      image: "pics6.PNG",
+    },
+    {
       title: "Famtrust",
       description:
         "A full-stack web application for finance and other value managements, built with React, Node.js, and MongoDB.",
