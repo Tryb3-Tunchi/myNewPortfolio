@@ -5,7 +5,7 @@ const ExperienceContent = () => {
     {
       company: "PROVA INTRNSHIP",
       position: "Video Editor (Virtual Assistant)",
-      period: "2024 - 2025",
+      period: "2025 - Present",
       description: [
         "Working as a Video Editor (Virtual Assistant) for a company that creates and run Ads, using AI and modern technologies to offer solutions for its clients.",
       ],
