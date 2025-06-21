@@ -24,6 +24,17 @@ const ProjectsContent = () => {
       image: "/pic6.png",
     },
     {
+      title: "MEDICARE FOR ALL",
+      description:
+        "A full-stack web application for a healthcare system that allows users to manage their health records, track their medical history, and manage their healthcare, built with React, Node.js, and MongoDB.",
+
+      technologies: ["React(vite)", "Node.js", "Tailwind CSS", "MongoDB"],
+      github: "https://github.com/yourusername/project-one",
+      live: "https://MEDICARE-FOR-ALL.vercel.app",
+      image: "/pic7.png",
+    },
+
+    {
       title: "Famtrust",
       description:
         "A full-stack web application for finance and other value managements, built with React, Node.js, and MongoDB.",
@@ -31,6 +42,16 @@ const ProjectsContent = () => {
       github: "https://github.com/yourusername/project-one",
       live: "https://famtrust-frontend-five.vercel.app",
       image: "pics2.PNG",
+    },
+    {
+      title: "Prestryb3 Finswap",
+      description:
+        "An Exchange platform for trading crypto currencies, buying and gift cards and also offer virtual card and other services built with React, Node.js, and MongoDB.",
+
+      technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
+      github: "https://github.com/Tryb3-Tunchi/prestyrb3.git",
+      live: "https://prestryb3.vercel.app",
+      image: "/pic8.png",
     },
     {
       title: "Amaziteacademy",
@@ -63,35 +84,39 @@ const ProjectsContent = () => {
   ];
 
   return (
-    <div className="grid gap-8 ">
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="group relative bg-gray-800 rounded-lg overflow-hidden transform transition-all duration-300 
-                     hover:-translate-y-2 hover:shadow-xl"
+          className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden 
+                     transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl
+                     border border-gray-200 dark:border-gray-700 shadow-lg"
         >
           <div
-            className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-0 
+            className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/80 opacity-0 
                         group-hover:opacity-100 transition-opacity duration-300"
           />
 
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-64 object-cover object-center"
+            className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
           />
 
           <div className="relative p-6">
-            <h3 className="text-xl font-semibold text-teal-400 mb-2">
+            <h3 className="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-3">
               {project.title}
             </h3>
-            <p className="text-gray-300 mb-4">{project.description}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+              {project.description}
+            </p>
 
             <div className="flex flex-wrap gap-2 mb-4">
               {project.technologies.map((tech, i) => (
                 <span
                   key={i}
-                  className="text-sm text-teal-400 bg-teal-400/10 px-3 py-1 rounded-full"
+                  className="text-xs text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-400/10 
+                           px-3 py-1 rounded-full border border-teal-200 dark:border-teal-800"
                 >
                   {tech}
                 </span>
@@ -101,13 +126,19 @@ const ProjectsContent = () => {
             <div className="flex space-x-4">
               <a
                 href={project.github}
-                className="text-gray-400 hover:text-teal-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 
+                         transition-colors duration-300 transform hover:scale-110"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github size={20} />
               </a>
               <a
                 href={project.live}
-                className="text-gray-400 hover:text-teal-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 
+                         transition-colors duration-300 transform hover:scale-110"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <ExternalLink size={20} />
               </a>

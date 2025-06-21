@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
+import { useTheme } from "../../contexts/ThemeContext";
 
 // Import sections
 import AboutSection from "../Sections/AboutSection";
@@ -12,12 +13,13 @@ import ContactSection from "../Sections/ContactSection";
 // Import UI components
 import NavigationButton from "../UI/NavigationButton";
 import SocialLinks from "../UI/SocialLinks";
+import ThemeToggle from "../UI/ThemeToggle";
 
 const Portfolio = () => {
   const activeSection = useScrollSpy();
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // const navigationSections = ['about', 'experience', 'projects', 'contact'];
+  const { theme } = useTheme();
 
   useEffect(() => {
     setIsVisible(true);
@@ -29,30 +31,37 @@ const Portfolio = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // Mobile menu classes
-  const mobileMenuClasses = `
-    fixed top-0 left-0 h-screen w-full md:w-3/4 bg-gray-900 
-    transform transition-transform duration-300 ease-in-out z-40
-    lg:translate-x-0 p-8 flex flex-col justify-between
+  // Sidebar classes with theme support
+  const sidebarClasses = `
+    fixed top-0 left-0 h-screen w-80 bg-white dark:bg-gray-900 
+    transform transition-transform duration-500 ease-in-out z-40
+    shadow-2xl border-r border-gray-200 dark:border-gray-700
     ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
   `;
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div
+      className={`min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}
+    >
+      {/* Theme Toggle */}
+      <ThemeToggle />
+
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="fixed top-4 right-10 z-50 p-2 rounded-lg bg-gray-800 lg:hidden"
+        className="fixed top-4 left-4 z-50 p-3 rounded-lg bg-white dark:bg-gray-800 
+                   shadow-lg hover:shadow-xl transition-all duration-300 lg:hidden
+                   border border-gray-200 dark:border-gray-700"
         aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
       >
         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* Left Section */}
-      <div className={mobileMenuClasses}>
+      {/* Sidebar */}
+      <div className={sidebarClasses}>
         <div
           className={`
-          transform transition-all duration-1000 w-full m-auto 
+          transform transition-all duration-1000 w-full h-full p-8 flex flex-col justify-between
           ${
             isVisible
               ? "translate-x-0 opacity-100"
@@ -60,49 +69,53 @@ const Portfolio = () => {
           }
         `}
         >
-          <h1 className=" text-7xl font-bold mb-4 text-teal-400">
-            Obinna Tochukwu
-          </h1>
+          <div className="flex-1">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-4 text-teal-600 dark:text-teal-400 leading-tight">
+              Obinna Tochukwu
+            </h1>
 
-          <p className="text-lg text-gray-400 mb-8">
-            Frontend web and software Developer crafting exceptional digital
-            experiences, providing solutions and having fun with codes.
-          </p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+              Full-Stack Developer crafting exceptional digital experiences,
+              providing solutions and having fun with codes.
+            </p>
 
-          {/* Navigation */}
-          <div className="space-y-2">
-            {["about", "experience", "projects","contact"].map((section) => (
-              <NavigationButton
-                key={section}
-                label={section.charAt(0).toUpperCase() + section.slice(1)}
-                isActive={activeSection === section}
-                onClick={() => scrollToSection(section)}
-              />
-            ))}
+            {/* Navigation */}
+            <div className="space-y-2">
+              {["about", "experience", "projects", "contact"].map((section) => (
+                <NavigationButton
+                  key={section}
+                  label={section.charAt(0).toUpperCase() + section.slice(1)}
+                  isActive={activeSection === section}
+                  onClick={() => scrollToSection(section)}
+                />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Social Links */}
-        <SocialLinks />
+          {/* Social Links */}
+          <SocialLinks />
+        </div>
       </div>
 
-      {/* Right Section */}
-      <main className="md:ml-[3.333333%] p-8 md:px-16">
-        <div className="space-y-2">
+      {/* Main Content */}
+      <main className="lg:ml-80 p-4 lg:p-8">
+        <div className="max-w-6xl mx-auto space-y-16">
           <section id="about" className="min-h-screen py-16">
-            <h2 className="text-2xl font-bold mb-6 text-teal-400">About</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
+              About
+            </h2>
             <AboutSection />
           </section>
 
-          <section id="experience" className="min-h-screen  py-16">
-            <h2 className="text-2xl font-bold mb-6 text-teal-400">
+          <section id="experience" className="min-h-screen py-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
               Experience
             </h2>
             <ExperienceSection />
           </section>
 
           <section id="projects" className="min-h-screen py-16">
-            <h2 className="text-2xl font-bold mb-6 text-teal-400">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
               Latest Projects
             </h2>
             <ProjectsSection />
