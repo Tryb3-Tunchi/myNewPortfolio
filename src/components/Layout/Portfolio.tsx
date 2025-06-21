@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
-import { useTheme } from "../../contexts/ThemeContext";
 
 // Import sections
 import AboutSection from "../Sections/AboutSection";
@@ -19,7 +18,6 @@ const Portfolio = () => {
   const activeSection = useScrollSpy();
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme } = useTheme();
 
   useEffect(() => {
     setIsVisible(true);
