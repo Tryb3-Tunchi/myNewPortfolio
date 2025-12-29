@@ -1,13 +1,19 @@
 // src/components/UI/SocialLinks.tsx
 // import React from "react";
-import { Github, Linkedin, Twitter, Mail, FileText } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  FileText,
+  Instagram,
+} from "lucide-react";
 // import { useNavigate } from "react-router-dom";
 
 const SocialLinks = () => {
   const handleResumeClick = () => {
-    // Replace with your actual resume PDF URL
     const resumeUrl =
-      "https://docs.google.com/file/d/1Nur4SHSiSn8-5_wKl9L07cPDaB08N8rR/edit?usp=docslist_api&filetype=msword";
+      "https://drive.google.com/file/d/1bE_TKxltmbzADr10cqnzFpZrUpbOlwuu/view?usp=drive_link";
     window.open(resumeUrl, "_blank");
   };
 
@@ -40,6 +46,15 @@ const SocialLinks = () => {
           aria-label="Twitter"
         >
           <Twitter size={24} />
+        </a>
+        <a
+          href="https://instagram.com" // User will update with actual Instagram link
+          className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors hover:-translate-y-1 transform duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <Instagram size={24} />
         </a>
       </div>
 

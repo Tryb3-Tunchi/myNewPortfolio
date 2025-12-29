@@ -104,7 +104,7 @@ const ContactSection = () => {
   const handleResumeDownload = () => {
     // Replace with your actual CV/resume URL
     const resumeUrl =
-      "https://docs.google.com/file/d/1Nur4SHSiSn8-5_wKl9L07cPDaB08N8rR/edit?usp=docslist_api&filetype=msword";
+      "https://drive.google.com/file/d/1bE_TKxltmbzADr10cqnzFpZrUpbOlwuu/view?usp=drive_link";
     window.open(resumeUrl, "_blank");
   };
 

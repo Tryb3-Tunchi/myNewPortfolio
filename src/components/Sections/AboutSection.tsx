@@ -9,7 +9,7 @@ const AboutSection = () => {
             Hey! I'm Tochukwu, a passionate full-stack developer who loves
             building exceptional digital experiences. I specialize in creating
             responsive, user-friendly web applications using modern technologies
-            like React, TypeScript, Node.js, and MongoDB.
+            like React, TypeScript, Node.js, MongoDB, Firebase, PHP, MySQL, and Django.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
@@ -22,8 +22,10 @@ const AboutSection = () => {
           <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
             With expertise in both frontend and backend development, I can build
             complete web applications from database design to user interface
-            implementation. I'm always eager to learn new technologies and take
-            on challenging projects.
+            implementation. My backend skills include working with Firebase for
+            real-time applications, PHP and MySQL for traditional web development,
+            and Django for Python-based solutions. I'm always eager to learn new
+            technologies and take on challenging projects.
           </p>
         </div>
 
@@ -67,6 +69,10 @@ const AboutSection = () => {
                   "Node.js",
                   "Express.js",
                   "MongoDB",
+                  "Firebase",
+                  "PHP",
+                  "MySQL",
+                  "Django",
                   "REST APIs",
                   "JWT Authentication",
                   "Socket.io",

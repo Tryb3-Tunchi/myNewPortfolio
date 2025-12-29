@@ -4,10 +4,14 @@ import { Menu, X } from "lucide-react";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
 
 // Import sections
+import HomeSection from "../Sections/HomeSection";
 import AboutSection from "../Sections/AboutSection";
-import ExperienceSection from "../Sections/ExperienceSection";
+import DevExperienceSection from "../Sections/DevExperienceSection";
 import ProjectsSection from "../Sections/ProjectsSection";
 import ContactSection from "../Sections/ContactSection";
+import VideoEditingSection from "../Sections/VideoEditingSection";
+import VideoExperienceSection from "../Sections/VideoExperienceSection";
+import VideoProjectsSection from "../Sections/VideoProjectsSection";
 
 // Import UI components
 import NavigationButton from "../UI/NavigationButton";
@@ -18,6 +22,7 @@ const Portfolio = () => {
   const activeSection = useScrollSpy();
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentView, setCurrentView] = useState<"developer" | "editor">("developer");
 
   useEffect(() => {
     setIsVisible(true);
@@ -73,20 +78,37 @@ const Portfolio = () => {
             </h1>
 
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              Full-Stack Developer crafting exceptional digital experiences,
-              providing solutions and having fun with codes.
+              Full-Stack Developer & Video Editor crafting exceptional digital experiences, providing solutions and having fun with codes and creative visuals.
             </p>
 
             {/* Navigation */}
             <div className="space-y-2">
-              {["about", "experience", "projects", "contact"].map((section) => (
-                <NavigationButton
-                  key={section}
-                  label={section.charAt(0).toUpperCase() + section.slice(1)}
-                  isActive={activeSection === section}
-                  onClick={() => scrollToSection(section)}
-                />
-              ))}
+              {currentView === "developer" 
+                ? ["home", "about", "experience", "projects", "contact"].map((section) => (
+                    <NavigationButton
+                      key={section}
+                      label={section.charAt(0).toUpperCase() + section.slice(1)}
+                      isActive={activeSection === section}
+                      onClick={() => scrollToSection(section)}
+                    />
+                  ))
+                : ["home", "video-editing", "video-experience", "video-projects"].map((section) => {
+                    const labels: { [key: string]: string } = {
+                      "home": "Home",
+                      "video-editing": "Skills & Tools",
+                      "video-experience": "Experience",
+                      "video-projects": "Projects"
+                    };
+                    return (
+                      <NavigationButton
+                        key={section}
+                        label={labels[section]}
+                        isActive={activeSection === section}
+                        onClick={() => scrollToSection(section)}
+                      />
+                    );
+                  })
+              }
             </div>
           </div>
 
@@ -98,30 +120,62 @@ const Portfolio = () => {
       {/* Main Content */}
       <main className="lg:ml-80 p-4 lg:p-8">
         <div className="max-w-6xl mx-auto space-y-16">
-          <section id="about" className="min-h-screen py-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
-              About
-            </h2>
-            <AboutSection />
+          {/* Homepage Section */}
+          <section id="home" className="min-h-screen py-16">
+            <HomeSection onToggle={setCurrentView} currentView={currentView} />
           </section>
 
-          <section id="experience" className="min-h-screen py-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
-              Experience
-            </h2>
-            <ExperienceSection />
-          </section>
+          {currentView === "developer" ? (
+            <>
+              <section id="about" className="min-h-screen py-16">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
+                  About
+                </h2>
+                <AboutSection />
+              </section>
 
-          <section id="projects" className="min-h-screen py-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
-              Latest Projects
-            </h2>
-            <ProjectsSection />
-          </section>
+              <section id="experience" className="min-h-screen py-16">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
+                  Experience
+                </h2>
+                <DevExperienceSection />
+              </section>
 
-          <section id="contact" className="min-h-screen py-16">
-            <ContactSection />
-          </section>
+              <section id="projects" className="min-h-screen py-16">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
+                  Latest Projects
+                </h2>
+                <ProjectsSection />
+              </section>
+
+              <section id="contact" className="min-h-screen py-16">
+                <ContactSection />
+              </section>
+            </>
+          ) : (
+            <>
+              <section id="video-editing" className="min-h-screen py-16">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
+                  Skills & Tools
+                </h2>
+                <VideoEditingSection />
+              </section>
+
+              <section id="video-experience" className="min-h-screen py-16">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
+                  Experience
+                </h2>
+                <VideoExperienceSection />
+              </section>
+
+              <section id="video-projects" className="min-h-screen py-16">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-teal-600 dark:text-teal-400">
+                  Video Projects
+                </h2>
+                <VideoProjectsSection />
+              </section>
+            </>
+          )}
         </div>
       </main>
 

@@ -1,17 +1,24 @@
 import { useState, useEffect } from "react";
 
 export const useScrollSpy = () => {
-  const [activeSection, setActiveSection] = useState<string>("about");
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "experience", "projects", "contact"];
+      // Check for all possible sections
+      const allSections = ["home", "about", "experience", "projects", "contact", "video-editing", "video-experience", "video-projects"];
 
-      const sectionElements = sections.map((section) => ({
-        id: section,
-        element: document.getElementById(section),
-        offset: document.getElementById(section)?.offsetTop || 0,
-      }));
+      const sectionElements = allSections
+        .map((section) => {
+          const element = document.getElementById(section);
+          return {
+            id: section,
+            element,
+            offset: element?.offsetTop || 0,
+          };
+        })
+        .filter((section) => section.element !== null)
+        .sort((a, b) => a.offset - b.offset);
 
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 

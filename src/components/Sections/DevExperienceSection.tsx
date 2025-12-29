@@ -1,28 +1,7 @@
-// import React from 'react';
+// src/components/Sections/DevExperienceSection.tsx
 
-const ExperienceContent = () => {
-  const experiences = [
-    {
-      company: "HNG INTERNSHIP - HNG 13",
-      position: "Video Editor (Finalist)",
-      period: "September - December 2025",
-      description: [
-        "Successfully completed all stages (0-10) of the HNG 13 Video Editing Track as a finalist",
-        "Created product explainer videos, motion graphics ads, and viral-style content using Adobe Premiere Pro, Alight Motion, and AI tools",
-        "Produced educational TikTok-style videos on Nigerian history combining storytelling, animation, and motion graphics",
-        "Directed and edited a short-form documentary on O.D.I.N.A.K.A fashion brand, blending interviews, storytelling, and B-roll cinematography",
-        "Developed high-energy product ads for FieldPath Pro and MenuCard using cinematic transitions and modern editing techniques",
-        "Utilized AI tools including Veo3, Nanobana, and AI Gen Vid to enhance video production workflow",
-      ],
-    },
-    {
-      company: "PROVA INTERNSHIP",
-      position: "Video Editor (Virtual Assistant)",
-      period: " Started May 2025 ",
-      description: [
-        "Working as a Video Editor (Virtual Assistant) for a company that creates and run Ads, using AI and modern technologies to offer solutions for its clients.",
-      ],
-    },
+const DevExperienceSection = () => {
+  const devExperiences = [
     {
       company: "BRAINWAVE MATRIX SOLUTIONS",
       position: "Full-Stack Developer",
@@ -43,7 +22,6 @@ const ExperienceContent = () => {
         "Worked with REST APIs and integrated various third-party services",
       ],
     },
-   
     {
       company: "FluxDev",
       position: "Full-Stack Developer",
@@ -96,7 +74,7 @@ const ExperienceContent = () => {
 
   return (
     <div className="space-y-12">
-      {experiences.map((exp, index) => (
+      {devExperiences.map((exp, index) => (
         <div
           key={index}
           className="group relative pl-8 border-l-2 border-gray-300 dark:border-gray-700 
@@ -139,4 +117,5 @@ const ExperienceContent = () => {
   );
 };
 
-export default ExperienceContent;
+export default DevExperienceSection;
+
