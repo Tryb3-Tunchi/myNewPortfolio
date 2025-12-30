@@ -39,7 +39,7 @@ const SocialLinks = () => {
           <Linkedin size={24} />
         </a>
         <a
-          href="https://twitter.com/itstunchi"
+          href="https://twitter.com/itstunchi_"
           className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors hover:-translate-y-1 transform duration-200"
           target="_blank"
           rel="noopener noreferrer"
