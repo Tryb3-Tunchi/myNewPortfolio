@@ -9,9 +9,18 @@ const ProjectsContent = () => {
       description:
         "A full-stack web application for fashionable clothings and other stylic accessories, built with React, Node.js, and Django-py.",
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      github: "https://github.com/yourusername/project-one",
-      live: "https://asloriginals.netlify.app/credits",
+      github: "https://github.com/Tryb3-Tunchi",
+      live: "https://asluxuryoriginals.com",
       image: "/pic1.PNG",
+    },
+    {
+      title: "URL link Shortner",
+      description:
+        "This is a simple link shortener I built using JavaScript and PHP. It converts long URLs into short, shareable links that are easier to send and manage. The shortened links help improve click-through rates, are cleaner for SEO-friendly sharing, and can be used for marketing, social media, or tracking purposes.",
+      technologies: ["Javascript", "MySql", "PHP", "Tailwind CSS"],
+      github: "https://github.com/Tryb3-Tunchi",
+      live: "https://lmkl.name.ng",
+      image: "/pics9.png",
     },
     {
       title: "Tryb3-Chaw",
@@ -19,9 +28,19 @@ const ProjectsContent = () => {
         "An Online Food Delivery website that allows users to order food from various restaurants, track their orders, and manage their deliveries, built with React, Tailwind, and NodeJs..",
 
       technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
-      github: "https://github.com/yourusername/project-one",
-      live: "https://famtrust-frontend-five.vercel.app",
+      github: "https://github.com/Tryb3-Tunchi",
+      live: "https://tyrb3-chaw.vercel.app",
       image: "/pic6.png",
+    },
+    {
+      title: "Banking administration system",
+      description:
+        "An Online Banking administration system that allows users to manage their bank accounts, transactions, and other banking services.  Admin Dashboard Prototype built with Next.js and Tailwind CSS, using Firebase as the backend. It demonstrates user management, protected routes, and real-time data handling in a modern, responsive interface...",
+
+      technologies: ["Next(JS)", "Firebase", "Tailwind CSS", "Vercel"],
+      github: "https://github.com/Tryb3-Tunchi",
+      live: "https://ASBNAdmin.vercel.app",
+      image: "/pics11.png",
     },
     {
       title: "MEDICARE FOR ALL",
@@ -29,8 +48,8 @@ const ProjectsContent = () => {
         "A full-stack web application for a healthcare system that allows users to manage their health records, track their medical history, and manage their healthcare, built with React, Node.js, and MongoDB.",
 
       technologies: ["React(vite)", "Node.js", "Tailwind CSS", "MongoDB"],
-      github: "https://github.com/yourusername/project-one",
-      live: "https://MEDICARE-FOR-ALL.vercel.app",
+      github: "https://github.com/Tryb3-Tunchi",
+      live: "https://my-medical-ba9bc.web.app",
       image: "/pic7.png",
     },
 
@@ -39,7 +58,7 @@ const ProjectsContent = () => {
       description:
         "A full-stack web application for finance and other value managements, built with React, Node.js, and MongoDB.",
       technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
-      github: "https://github.com/yourusername/project-one",
+      github: "https://github.com/Tryb3-Tunchi",
       live: "https://famtrust-frontend-five.vercel.app",
       image: "pics2.PNG",
     },
@@ -58,7 +77,7 @@ const ProjectsContent = () => {
       description:
         "A full-stack web application for school data system and studies for pupils built with React(vite), Node.js, and typescript.",
       technologies: ["React(vite)", "Node.js", "Tailwind CSS"],
-      github: "https://github.com/yourusername/project-one",
+      github: "https://github.com/Tryb3-Tunchi",
       live: "https://amaziteacademy.com",
       image: "pics3.PNG",
     },
@@ -67,16 +86,16 @@ const ProjectsContent = () => {
       description:
         "A Broker and Trading platform for easy and built in copy trading signals that is built with Typescript, Vite, Public and specificall construsted API and tailwind.",
       technologies: ["Typescript", "Trading API", "Tailwind CSS"],
-      github: "https://github.com/yourusername/project-one",
-      live: "COMING SOON",
-      image: "pics5.png",
+      github: "https://github.com/Tryb3-Tunchi",
+      live: "https://xexplatform.space",
+      image: "pics10.png",
     },
     {
       title: "Tryb3-gpt Chat AI",
       description:
         "An AI chatting platform that detects any language, summarize and translate very effective and a good learning tool built with Typescript, chrome-AI API, and tailwind.",
       technologies: ["Typescript", "Chrome API", "Tailwind CSS"],
-      github: "https://github.com/yourusername/project-one",
+      github: "https://github.com/Tryb3-Tunchi",
       live: "https://tryb3-gpt.netlify.app/",
       image: "pics4.png",
     },
