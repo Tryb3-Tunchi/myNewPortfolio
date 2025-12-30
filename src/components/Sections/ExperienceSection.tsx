@@ -5,7 +5,7 @@ const ExperienceContent = () => {
     {
       company: "HNG INTERNSHIP - HNG 13",
       position: "Video Editor (Finalist)",
-      period: "September - December 2025",
+      period: "September 2025 - December 2025",
       description: [
         "Successfully completed all stages (0-10) of the HNG 13 Video Editing Track as a finalist",
         "Created product explainer videos, motion graphics ads, and viral-style content using Adobe Premiere Pro, Alight Motion, and AI tools",
@@ -43,7 +43,7 @@ const ExperienceContent = () => {
         "Worked with REST APIs and integrated various third-party services",
       ],
     },
-   
+
     {
       company: "FluxDev",
       position: "Full-Stack Developer",
@@ -59,7 +59,7 @@ const ExperienceContent = () => {
     {
       company: "InternPulse Company",
       position: "Frontend Developer",
-      period: "2022 - 2023",
+      period: "December 2023 - April 2024",
       description: [
         "Developed and maintained client-facing applications using React and TypeScript",
         "Collaborated with designers to implement pixel-perfect interfaces and responsive designs",
@@ -68,28 +68,29 @@ const ExperienceContent = () => {
         "Worked with REST APIs and integrated various third-party services",
       ],
     },
-    {
-      company: "GoMyCode",
-      position: "UI/UX Developer & Mentor",
-      period: "2021 - 2022",
-      description: [
-        "Designed and developed user interfaces for web applications using modern design principles",
-        "Mentored students in web development fundamentals and best practices",
-        "Created interactive prototypes and wireframes using Figma and Adobe XD",
-        "Conducted user research and usability testing to improve user experience",
-        "Collaborated with development teams to ensure design feasibility and implementation",
-      ],
-    },
+
     {
       company: "Freelance Projects",
       position: "Full-Stack Developer",
-      period: "2021 - Present",
+      period: "2023 - Present",
       description: [
         "Built complete web applications from concept to deployment for various clients",
         "Developed e-commerce platforms, portfolio websites, and business management systems",
         "Implemented authentication systems, payment gateways, and database management",
         "Provided ongoing maintenance and support for client applications",
         "Worked with diverse technologies including React, Node.js, MongoDB, and PostgreSQL",
+      ],
+    },
+    {
+      company: "Mira Tech Academy",
+      position: "UI/UX Developer & Mentor",
+      period: "2022 - 2023",
+      description: [
+        "Designed and developed user interfaces for web applications using modern design principles",
+        "Mentored students in web development fundamentals and best practices",
+        "Created interactive prototypes and wireframes using Figma and Adobe XD",
+        "Conducted user research and usability testing to improve user experience",
+        "Collaborated with development teams to ensure design feasibility and implementation",
       ],
     },
   ];
